@@ -71,6 +71,9 @@ b {
 <===>
 ================================================================================
 <===> inline_comments/silent/with_comma_in_comment/input.sass
+// A comma within a comment, even at the end of the line, should not cause the
+// parser to continue the selector on a new line, so this should parse as an
+// empty rule with selector "a", followed by the rule with selector "b".
 a // comment,
 b
   x: y
